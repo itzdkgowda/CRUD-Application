@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 300px;
+            padding: 16px;
+            background-color: white;
+            margin: 0 auto;
+            margin-top: 100px;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+        .container input[type="text"], .container input[type="password"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .container button {
+            background-color: #a2d5f5;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        .container button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <form onsubmit="login(); return false;">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" id="psw" required>
+
+            <button type="submit" name="submit">Login</button>
+        </form>
+    </div>
+    <script>
+        function login() {
+            const username = document.getElementById('uname').value;
+            const password = document.getElementById('psw').value;
+
+            // Check if username and password match
+            if (username === 'dhanush' && password === '12345') {
+                window.location.href = 'home.html'; // Redirect to home page
+            } else {
+                alert('Incorrect username or password');
+            }
+        }
+    </script>
+</body>
+</html>
